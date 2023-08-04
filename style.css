@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+
+:root {
+    --corBranca: white;
+    --corPreta: black;
+    --fundoEscuro: rgb(80, 80, 80);
+
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonteTitulo: 'Passion One', cursive;
+    --fonteConteudo: 'Sriracha', cursive;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body {
+    background-color: darkcyan;
+    font-family: var(--fonte1);
+
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--corPreta);
+    color: var(--corBranca);
+
+    text-align: center;
+}
+
+header > h1 {
+    /* Letras maiúsculas, mas as primeiras maiores */
+    font-variant: small-caps;
+    font-family: var(--fonteTitulo);
+    font-size: 8vw;
+
+    padding-top: 50px;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: var(--corBranca);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    font-family: var(--fonteConteudo);
+    font-size: 2.5vw;
+
+    padding-top: 20vh;
+    padding-left: 30px;
+    padding-bottom: 20vh;
+
+    line-height: 2em;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    color: var(--corPreta);
+    background-color: var(--corBranca);
+    text-shadow: px 0.5px 0px var(--fundoEscuro);
+}
+
+section.imagem {
+    color: var(--corBranca);
+    background-color: var(--fundoEscuro);
+    background-size: cover;
+    background-attachment: fixed;
+
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.425);
+}
+
+section.imagem > p {
+    /* A caixa vai se adaptar ao tamanho do conteúdo */
+    display: inline-block;
+
+    background-color: rgba(0, 0, 0, 0.425);
+    text-shadow: 1.5px 1.5px 0px var(--corPreta);
+    padding: 10px;
+}
+
+section#img1 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img2 {
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+}
+
+footer {
+    background-color: var(--corPreta);
+    color: var(--corBranca);
+    text-align: center;
+
+    padding: 10px;
+}
